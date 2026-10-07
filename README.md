@@ -12,10 +12,45 @@
 
 ---
 
+## 📊 Perbandingan Hasil: AI Biasa vs doc-craft (Before & After)
+
+Berikut adalah perbandingan nyata antara dokumen yang dibuat oleh model AI standar tanpa panduan (*Before*) dibandingkan dengan dokumen yang dihasilkan melalui **`doc-craft`** (*After*):
+
+### 1. Matriks Perbandingan Dokumen
+
+| Parameter | ❌ Hasil AI Biasa (Before) | ✅ Hasil doc-craft (After) |
+| :--- | :--- | :--- |
+| **Warna Teks** | Judul sering diberi warna biru navy (`#1B365D`) atau ungu acak. | **100% Teks Hitam Murni (`#000000`)** sesuai format baku laporan. |
+| **Tipografi** | Font acak (Calibri / Segoe UI / Arial campur aduk). | Standar baku **Times New Roman** (Cover 14-16pt, Isi 12pt Justified). |
+| **Tanda Baca** | Karakter bot *em dash* (`—`) berserakan di setiap kalimat. | **Nol Em Dash**: Diganti tanda baca alami (`:`, `-`, koma, kurung). |
+| **Gaya Bahasa** | Klise AI (*"di era digital ini"*, *"secara komprehensif"*, *"revolusioner"*). | **Bahasa Ilmiah & Teknis Lugas**: Berbasis data, rumus, dan fakta konkret. |
+| **Unsur Visual** | 100% dinding teks membosankan tanpa ada bagan grafis. | **Wajib 1-3 Diagram Teknis (300 DPI)** via Matplotlib (Topologi/Arsitektur). |
+| **Format Tabel** | Tabel mentah tanpa padding sel atau bergaris acak. | **Tabel Standar Akademik**: Header abu-abu muda (`#E0E0E0`) bergaris tegas. |
+| **Luaran Berkas** | Teks mentah di chat yang masih harus di-copy dan dirapikan berjam-jam. | **File Word `.docx` Siap Pakai**: Langsung dibuka di File Explorer Anda. |
+
+---
+
+### 2. Cuplikan Teks: Sebelum vs Sesudah
+
+#### ❌ Sebelum: Hasil Prompt AI Biasa
+> *"**BAB I — PENDAHULUAN**  
+> Di era digital yang berkembang secara revolusioner dan serba cepat saat ini, sistem basis data terdistribusi memegang peranan yang sangat penting nan krusial bagi lanskap teknologi modern. Tak dapat dipungkiri bahwa skalabilitas menjadi kunci utama — memungkinkan integrasi data yang seamless tanpa hambatan. Penting untuk dicatat bahwa dalam bab ini, kita akan menyelami secara komprehensif bagaimana arsitektur terdistribusi bekerja..."*
+>
+> *(Masalah: Teks judul berwarna biru navy, terdapat tanda baca bot `—`, penuh kata-kata hiasan kosong tanpa substansi teknis).*
+
+#### ✅ Sesudah: Hasil Dihasilkan oleh doc-craft
+> **BAB I PENDAHULUAN**  
+> **1.1 Latar Belakang**  
+> Sistem basis data terdistribusi (*Distributed DBMS*) mengelola kumpulan data yang secara logika terintegrasi namun tersebar secara fisik pada beberapa node jaringan. Implementasi sistem ini didorong oleh kebutuhan skalabilitas horizontal (*scale-out*), ketersediaan tinggi (*high availability*), dan penempatan data dekat dengan pengguna (*data locality*) guna meminimalkan latensi transfer jaringan.  
+>
+> *(Keunggulan: 100% teks hitam, Times New Roman rapi, bebas em dash, lugas, berbobot ilmiah, dan langsung diikuti diagram arsitektur 300 DPI).*
+
+---
+
 ## 🚀 Mengapa doc-craft?
 
 Banyak dokumen akademik dan teknis yang dibuat langsung oleh AI generik memiliki masalah umum:
-* ❌ **AI Slop**: Dipenuhi kata-kata klise (*"di era digital yang serba cepat ini"*, *"secara komprehensif"*, *"revolusioner"*) dan tanda baca bot *em dash* (`—`).
+* ❌ **AI Slop**: Dipenuhi kata-kata klise dan tanda baca bot *em dash* (`—`).
 * ❌ **Teks Berwarna-Warni**: Judul dan sub-bab sering diberi warna biru navy atau ungu yang tidak sesuai dengan standar instansi/kampus.
 * ❌ **Format Berantakan**: Margin acak, font campur aduk, dan tabel tidak memiliki garis batas standar.
 * ❌ **Monoton & Minim Visual**: Hanya berisi dinding teks panjang tanpa diagram arsitektur atau topologi.
@@ -94,7 +129,7 @@ Sesuaikan file `config.json` agar nama, NIM, dan prodi Anda otomatis terpasang d
 ```text
 doc-craft/
 ├── SKILL.md                  # Instruksi utama & gerbang kualitas untuk AI
-├── README.md                 # Dokumentasi publik GitHub
+├── README.md                 # Dokumentasi publik GitHub (dilengkapi Before & After)
 ├── LICENSE                   # Lisensi MIT (2026 M. Rifaldo Saputra)
 ├── config.json               # Profil default pengguna
 ├── scripts/
