@@ -1,0 +1,14 @@
+{
+  "author": "M. Rifaldo Saputra",
+  "nim": "245720111034",
+  "major": "Sistem Informasi",
+  "institution": "Universitas / Kampus",
+  "default_font": "Times New Roman",
+  "default_margin": "academic",
+  "auto_open_explorer": true,
+  "save_destinations": [
+    "desktop",
+    "downloads",
+    "workspace"
+  ]
+}
