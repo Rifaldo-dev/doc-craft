@@ -1,0 +1,28 @@
+{
+  "name": "Preset Teknis IT (SRS & System Architecture)",
+  "font": "Times New Roman",
+  "font_sizes": {
+    "title": 14,
+    "heading_1": 12.5,
+    "heading_2": 12,
+    "heading_3": 11.5,
+    "body": 11.5
+  },
+  "line_spacing": 1.15,
+  "paragraph_spacing_after": 6,
+  "margin_cm": {
+    "top": 2.5,
+    "bottom": 2.5,
+    "left": 2.5,
+    "right": 2.5
+  },
+  "text_color": "000000",
+  "required_sections": [
+    "Identitas Dokumen & Versi",
+    "1. Gambaran Umum Sistem",
+    "2. Kebutuhan Fungsional & Non-Fungsional (FR & NFR)",
+    "3. Arsitektur Sistem & Diagram Alur (300 DPI)",
+    "4. Kamus Data & Desain Database (Tabel Relasi)",
+    "5. Matriks Pengujian & Deployment"
+  ]
+}

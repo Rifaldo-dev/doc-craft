@@ -1,0 +1,27 @@
+{
+  "name": "Preset Bisnis & SOP Formal",
+  "font": "Times New Roman",
+  "font_sizes": {
+    "title": 14,
+    "heading_1": 12.5,
+    "heading_2": 12,
+    "heading_3": 11.5,
+    "body": 11.5
+  },
+  "line_spacing": 1.15,
+  "paragraph_spacing_after": 6,
+  "margin_cm": {
+    "top": 2.5,
+    "bottom": 2.5,
+    "left": 2.5,
+    "right": 2.5
+  },
+  "text_color": "000000",
+  "required_sections": [
+    "Nomor Dokumen, Tanggal Berlaku & Pengesahan",
+    "1. Tujuan & Latar Belakang Kebijakan",
+    "2. Ruang Lingkup & Pihak Terlibat",
+    "3. Standar Operasional & Diagram Prosedur Kerja",
+    "4. Formulir / Lampiran Terkait"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Preset Akademik (Makalah & Skripsi)",
+  "font": "Times New Roman",
+  "font_sizes": {
+    "title": 14,
+    "heading_1": 12.5,
+    "heading_2": 12,
+    "heading_3": 11.5,
+    "body": 12
+  },
+  "line_spacing": 1.5,
+  "paragraph_spacing_after": 6,
+  "margin_cm": {
+    "top": 2.5,
+    "bottom": 2.5,
+    "left": 3.0,
+    "right": 2.5
+  },
+  "text_color": "000000",
+  "required_sections": [
+    "Cover / Halaman Judul",
+    "Kata Pengantar",
+    "Daftar Isi",
+    "BAB I PENDAHULUAN (Latar Belakang, Rumusan Masalah, Tujuan)",
+    "BAB II PEMBAHASAN (Landasan Teori, Analisis, Diagram Teknis, Tabel)",
+    "BAB III PENUTUP (Kesimpulan dan Saran)",
+    "DAFTAR PUSTAKA (Standar APA / IEEE)"
+  ]
+}
