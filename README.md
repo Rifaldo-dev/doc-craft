@@ -14,7 +14,11 @@
 
 ## 📊 Perbandingan Hasil: AI Biasa vs doc-craft (Before & After)
 
-Berikut adalah perbandingan nyata antara dokumen yang dibuat oleh model AI standar tanpa panduan (*Before*) dibandingkan dengan dokumen yang dihasilkan melalui **`doc-craft`** (*After*):
+<p align="center">
+  <img src="examples/before_after_comparison.png" alt="Perbandingan Dokumen AI Biasa vs doc-craft" width="100%">
+</p>
+
+Berikut adalah perbandingan visual nyata antara dokumen yang dibuat oleh model AI standar tanpa panduan (*Before*) dibandingkan dengan dokumen yang dihasilkan melalui **`doc-craft`** (*After*):
 
 ### 1. Matriks Perbandingan Dokumen
 
