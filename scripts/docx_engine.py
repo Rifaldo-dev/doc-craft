@@ -49,8 +49,8 @@ class StandardDocument:
     def _clean_text(self, text):
         if not text:
             return ""
-        # R-02 Hard Gate: Larang em-dash, ubah ke simbol standar
-        return text.replace("—", "-")
+        # R-02 Hard Gate: Larang em-dash/en-dash dan bullet dots mentah
+        return text.replace("—", "-").replace("–", "-").replace("•", "-")
 
     def add_cover(self, title, subtitle=None, author=None, nim=None, major=None, institution=None, year=None):
         """Membuat Halaman Judul / Cover Formal."""
@@ -189,26 +189,38 @@ class StandardDocument:
         run.font.color.rgb = BLACK
         return p
 
-    def add_bullet(self, bold_prefix, text):
+    def add_list_item(self, bold_prefix, text, left_indent=0.45, hanging_indent=0.25):
+        """
+        Membuat butir daftar formal berstandar akademik dengan hanging indent rapi.
+        Menghindari penggunaan 'List Bullet' (tanpa titik bullet liar).
+        """
         bold_prefix = self._clean_text(bold_prefix)
         text = self._clean_text(text)
-        p = self.doc.add_paragraph(style='List Bullet')
+        p = self.doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         p.paragraph_format.space_before = Pt(0)
         p.paragraph_format.space_after = Pt(3)
         p.paragraph_format.line_spacing = 1.15
+        p.paragraph_format.left_indent = Inches(left_indent)
+        p.paragraph_format.first_line_indent = Inches(-hanging_indent)
         
-        r1 = p.add_run(bold_prefix)
-        r1.font.name = self.font_name
-        r1.font.size = Pt(11.5)
-        r1.font.bold = True
-        r1.font.color.rgb = BLACK
+        if bold_prefix:
+            r1 = p.add_run(bold_prefix)
+            r1.font.name = self.font_name
+            r1.font.size = Pt(11.5)
+            r1.font.bold = True
+            r1.font.color.rgb = BLACK
         
-        r2 = p.add_run(text)
-        r2.font.name = self.font_name
-        r2.font.size = Pt(11.5)
-        r2.font.color.rgb = BLACK
+        if text:
+            r2 = p.add_run(text)
+            r2.font.name = self.font_name
+            r2.font.size = Pt(11.5)
+            r2.font.color.rgb = BLACK
         return p
+
+    def add_bullet(self, bold_prefix, text, left_indent=0.45, hanging_indent=0.25):
+        """Alias untuk add_list_item demi kompatibilitas, bebas dari titik bullet."""
+        return self.add_list_item(bold_prefix, text, left_indent=left_indent, hanging_indent=hanging_indent)
 
     def add_table(self, headers, rows_data):
         """Membuat tabel bergaris rapi dengan header abu-abu dan teks hitam."""
