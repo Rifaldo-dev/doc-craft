@@ -174,13 +174,15 @@ class StandardDocument:
         run.font.color.rgb = BLACK
         return p
 
-    def add_paragraph(self, text, space_after=6, line_spacing=1.15):
+    def add_paragraph(self, text, space_after=6, line_spacing=1.15, first_line_indent=0.45):
         text = self._clean_text(text)
         p = self.doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         p.paragraph_format.space_before = Pt(0)
         p.paragraph_format.space_after = Pt(space_after)
         p.paragraph_format.line_spacing = line_spacing
+        if first_line_indent:
+            p.paragraph_format.first_line_indent = Inches(first_line_indent)
         run = p.add_run(text)
         run.font.name = self.font_name
         run.font.size = Pt(11.5)
